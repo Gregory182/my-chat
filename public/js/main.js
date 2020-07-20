@@ -13,14 +13,18 @@ chatForm.addEventListener('submit', (e)=>{
 })
 
 socket.on('msg', msg => {
-    console.log(msg);
     outputMsg(msg);
+    msgContainer.scrollTop = msgContainer.scrollHeight;
+    //Scroll down
 
 })
 
 const outputMsg = (msg) => {
     const chatDiv = document.createElement('div')
-    chatDiv.innerHTML =`<p>${msg}</p>`;
+    chatDiv.classList.add('message')
+    chatDiv.innerHTML =`
+    <p class="meta">${msg.username} <span>${msg.time}</span></p>
+    <p>${msg.text}</p>`;
     msgContainer.appendChild(chatDiv);
     
 }

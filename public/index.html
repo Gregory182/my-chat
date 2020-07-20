@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <h2>My little chat</h2>
         <div id="chat-form" class="chat-container">
-            <form action="submit">
-                <input type="text" id="msg">
-                <button type="submit">Send</button>
-            </form>
-            <div class="msg-container">
-                
+            <div class="chat-wrapper">
+                <div class="msg-container">
+
+                    <!-- <div class="message">
+                        <p class="meta">Greg <span>9:20</span></p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, nulla.</p>
+                    </div> -->
+                </div>
+
+                <div class="form-container">
+                    <form action="submit">
+                        <input type="text" id="msg">
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
             </div>
+
+
         </div>
     </div>
+    <!-- <div class="container">
+        df
+    </div> -->
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
